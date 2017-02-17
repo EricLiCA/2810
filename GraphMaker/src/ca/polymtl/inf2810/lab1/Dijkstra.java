@@ -1,58 +1,70 @@
 package ca.polymtl.inf2810.lab1;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 
-public class Dijkstra {
+public abstract class Dijkstra {
 
-	public static int amountCheck = 0;
+	Graph graph;
+	List<Path> potentialPaths;
+	List<Path> finishedPaths;
 
-	public static void execute(Map<String, Node> nodes, List<Tuple<Integer, Node, Node>> distances) {
-		sort(distances);
-
-		for (Tuple<Integer, Node, Node> tuple : distances) {
-			System.out.println(tuple.getKey() + "\t" + tuple.getFirst() + " - " + tuple.getSecond());
-			if (!checkForPath(tuple.getSecond(), new Pair<Node, Integer>(tuple.getFirst(), tuple.getKey()), nodes)) {
-				tuple.getSecond().setDistance(tuple.getFirst(), tuple.getKey());
-				tuple.getFirst().setDistance(tuple.getSecond(), tuple.getKey());
-				System.out.println("Link!");
-			}
-		}
-
+	public Dijkstra (Graph graph) {
+		this.graph = graph;
+		this.potentialPaths = new ArrayList<Path>();
+		this.finishedPaths = new ArrayList<Path>();
+		
+		this.potentialPaths.add(new Path(graph));
 	}
-
-	private static boolean checkForPath(final Node goal, final Pair<Node, Integer> progression,
-			final Map<String, Node> nodes) {
-		if (progression.getValue() == 0 && progression.getKey().equals(goal))
-			return true;
-		else if (progression.getValue() < 0) {
-			return false;
+	
+	public Path execute() {
+		
+		while (finishedPaths.size() < 100) {
+			this.sort();
+			if (potentialPaths.size() > 100)
+			this.potentialPaths = this.potentialPaths.subList(0, 100);
+			System.out.println(this.potentialPaths.get(0));
+			this.potentialPaths.addAll(this.potentialPaths.get(0).getSubPaths(this));
+			this.potentialPaths.remove(0);
 		}
-
-		for (Entry<String, Node> node : nodes.entrySet()) {
-			if (progression.getKey().isConnectedTo(node.getValue())) {
-				Integer distanceToNode = progression.getKey().getDistanceFrom(node.getValue());
-				if (distanceToNode > 0) {
-					Pair<Node, Integer> newProgression = new Pair<Node, Integer>(node.getValue(),
-							progression.getValue() - distanceToNode);
-					if (checkForPath(goal, newProgression, nodes))
-						return true;
-				}
-			}
-		}
-		return false;
-
-	}
-
-	private static <T extends Tuple<Integer, Node, Node>> void sort(List<T> distances) {
-		Collections.sort(distances, new Comparator<T>() {
+		
+		Collections.sort(finishedPaths, new Comparator<Path>() {
 
 			@Override
-			public int compare(T first, T second) {
-				return first.getKey() - second.getKey();
+			public int compare(Path o1, Path o2) {
+				return compare(o1, o2);
+			}
+		});
+		
+		
+		return finishedPaths.get(0);
+	}
+	
+	public abstract boolean isFinished(Path potentialPath);
+	public abstract boolean isTooFar(Path potentialPath);
+	public abstract int compare(Path p1, Path p2);
+	
+	public void addFinishedPath(Path path) {
+		if (!finishedPaths.contains(path))
+			finishedPaths.add(path);
+	}
+	
+	private void sort() {
+		Collections.sort(this.potentialPaths, new Comparator<Path>() {
+
+			@Override
+			public int compare(Path o1, Path o2) {
+				double r1 = o1.getRatio();
+				double r2 = o2.getRatio();
+
+				if (r1 > r2)
+					return 1;
+				else if (r1 < r2)
+					return -1;
+				else
+					return 0;
 			}
 		});
 	}

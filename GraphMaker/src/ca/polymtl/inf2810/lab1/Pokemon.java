@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import ca.polymtl.inf2810.lab1.Node.NodeType;
 
@@ -91,7 +92,47 @@ public class Pokemon {
 			e.printStackTrace();
 		}
 		
-		Dijkstra.execute(nodes, distances);
+		GraphMaker.execute(nodes, distances);
+		
+
+		System.out.println("\nNodes connections :\n");
+		for (Entry<String, Node> node : nodes.entrySet()) {
+			System.out.println("Node " + node.getValue().toString() + " is connected to :");
+			for (Entry<Node, Integer> connection : node.getValue().getConnections().entrySet()) {
+				System.out.println("\t- " + String.format("%1$-20s", connection.getKey()) + "Distance : " + connection.getValue());
+			}
+			
+			
+			System.out.println();
+		}
+		
+		Graph graph = new Graph("depart");
+		for (Entry<String, Node> node : nodes.entrySet()) {
+			graph.addNode(node.getValue());
+		}
+		
+		final int MIN_POINTS = 1000;
+		
+		Dijkstra d = new Dijkstra(graph) {
+			
+			@Override
+			public boolean isTooFar(Path potentialPath) {
+				return false;
+			}
+			
+			@Override
+			public boolean isFinished(Path potentialPath) {
+				return potentialPath.getTotalPoints() >= MIN_POINTS;
+			}
+			
+			@Override
+			public int compare(Path p1, Path p2) {
+				return p1.getDistance() - p2.getDistance();
+			}
+		};
+		
+		Path optimized = d.execute();
+		System.out.println(optimized);
 	}
 
 }
