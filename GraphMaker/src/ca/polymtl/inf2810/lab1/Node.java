@@ -44,7 +44,7 @@ public class Node {
 
 	@Override
 	public String toString() {
-		return type.name() + " " + name + "(" + value + ")";
+		return type.name() + " " + name + "(" + value + ", " + getDeactivationTime() + ")";
 	}
 
 	public Map<Node, Integer> getConnections() {
@@ -75,6 +75,10 @@ public class Node {
 		default:
 			return 0;
 		}
+	}
+
+	public String getName() {
+		return name;
 	}
 
 }

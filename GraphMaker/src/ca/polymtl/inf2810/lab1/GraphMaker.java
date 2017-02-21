@@ -8,20 +8,22 @@ import java.util.Map.Entry;
 
 public class GraphMaker {
 
-	public static int amountCheck = 0;
+	public static Graph execute(Map<String, Node> nodes, List<Arc> edges) {
+		
+		Graph graph = new Graph(nodes.values());
+		
+		sort(edges);
 
-	public static void execute(Map<String, Node> nodes, List<Tuple<Integer, Node, Node>> distances) {
-		sort(distances);
-
-		for (Tuple<Integer, Node, Node> tuple : distances) {
-			System.out.println(tuple.getKey() + "\t" + tuple.getFirst() + " - " + tuple.getSecond());
-			if (!checkForPath(tuple.getSecond(), new Pair<Node, Integer>(tuple.getFirst(), tuple.getKey()), nodes)) {
-				tuple.getSecond().setDistance(tuple.getFirst(), tuple.getKey());
-				tuple.getFirst().setDistance(tuple.getSecond(), tuple.getKey());
-				System.out.println("Link!");
+		for (Arc edge : edges) {
+			if (!checkForPath(edge.getN2(), new Pair<Node, Integer>(edge.getN1(), edge.getDistance()), nodes)) {
+				edge.getN2().setDistance(edge.getN1(), edge.getDistance());
+				edge.getN1().setDistance(edge.getN2(), edge.getDistance());
+				graph.addEdge(edge);
 			}
 		}
 
+		return graph;
+		
 	}
 
 	private static boolean checkForPath(final Node goal, final Pair<Node, Integer> progression,
@@ -47,12 +49,12 @@ public class GraphMaker {
 
 	}
 
-	private static <T extends Tuple<Integer, Node, Node>> void sort(List<T> distances) {
-		Collections.sort(distances, new Comparator<T>() {
+	private static void sort(List<Arc> distances) {
+		Collections.sort(distances, new Comparator<Arc>() {
 
 			@Override
-			public int compare(T first, T second) {
-				return first.getKey() - second.getKey();
+			public int compare(Arc o1, Arc o2) {
+				return o1.getDistance() - o2.getDistance();
 			}
 		});
 	}
