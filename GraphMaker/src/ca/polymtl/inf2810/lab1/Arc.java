@@ -3,7 +3,7 @@ package ca.polymtl.inf2810.lab1;
 /**
  * An arc that links two nodes
  * 
- * @author chagn
+ * @author Sébastien Chagnon (1804702)
  *
  */
 public class Arc {

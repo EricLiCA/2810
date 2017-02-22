@@ -6,6 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+/**
+ * Can create Graphs from Nodes and distances between them
+ * 
+ * @author Sébastien Chagnon (1804702)
+ *
+ */
 public class GraphMaker {
 
 	/**
@@ -99,7 +105,8 @@ public class GraphMaker {
 	/**
 	 * Sorts the Arcs based on their length
 	 * 
-	 * @param distances the Arcs to sort
+	 * @param distances
+	 *            the Arcs to sort
 	 */
 	private static void sort(List<Arc> distances) {
 		Collections.sort(distances, new Comparator<Arc>() {

@@ -13,6 +13,13 @@ import java.util.Map;
 
 import javax.swing.JPanel;
 
+/**
+ * A graph contains Nodes and Arcs that links them. It extends JLabel so that it can
+ * be put in a GUI to displays the Graph
+ * 
+ * @author Sébastien Chagnon (1804702)
+ *
+ */
 public class Graph extends JPanel {
 
 	private static final long serialVersionUID = -3462949872752448755L;
