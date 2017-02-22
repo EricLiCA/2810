@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		Modele model = new Modele();
-		PokemonRoute vue = new PokemonRoute(model);
+		new PokemonRoute(model);
 	}
 	
 	
