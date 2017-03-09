@@ -1,0 +1,5 @@
+To use this program:
+- Make sure the file containing the data is in the same directory as the jar file
+- Open terminal and go to the jar directory
+- Run command "java -jar pokemon_route.jar"
+- Enjoy
