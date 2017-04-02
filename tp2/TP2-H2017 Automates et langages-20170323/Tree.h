@@ -13,7 +13,7 @@ class Tree {
 private:
     Node* root_;
     Node* suggestionNode_;
-    char suggestion_;
+    std::string suggestion_;
     std::string typedCharacters_;
     std::vector<std::string> mots_;
 

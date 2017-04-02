@@ -67,7 +67,7 @@ void Tree::addLexique(int low, int high) {
 }
 
 void Tree::autocomplete() {
-    std::string letter;
+    /*std::string letter;
     std::cin >> letter;
     std::cout << "Entered while loop" << std::endl;
     letter = *letter.substr(0, 1).c_str();
@@ -79,11 +79,19 @@ void Tree::autocomplete() {
         std::cout << "\r" + typedCharacters_;
         findSuggestion(*letter.c_str());
         std::cout << suggestion_ << std::endl;
+    }*/
+    std::string letter;
+    while (std::cin >> letter) {
+        letter = *letter.substr(0, 1).c_str();
+        typedCharacters_ += letter;
+        suggestion_ = typedCharacters_;
+        findSuggestion(*letter.c_str());
+        std::cout << suggestion_ << std::endl;
     }
 }
 
 void Tree::findSuggestion(char letter) {
-    bool found = false;
+    /*bool found = false;
     suggestion_ = letter;
     while(!found){
         if (letter == suggestionNode_->getValue()){
@@ -102,6 +110,26 @@ void Tree::findSuggestion(char letter) {
         else
         {
             suggestionNode_ = suggestionNode_->getRight();
+        }
+    }*/
+    Node* tempSuggestion = suggestionNode_;
+    bool found = false;
+    while (!found) {
+        if (letter == tempSuggestion->getValue()) {
+            suggestionNode_ = tempSuggestion->getMiddle();
+            while (tempSuggestion->getState() != final) {
+                tempSuggestion = tempSuggestion->getMiddle();
+                suggestion_ += tempSuggestion->getValue();
+            }
+            found = true;
+        }
+        else {
+            if (letter < tempSuggestion->getValue()) {
+                tempSuggestion = tempSuggestion->getLeft();
+            }
+            else {
+                tempSuggestion = tempSuggestion->getRight();
+            }
         }
     }
 }
