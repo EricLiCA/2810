@@ -82,40 +82,19 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique1.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique2.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique3.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique4.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique5.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/lexique6.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Données/readLexique.txt">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
 		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.cpp">
 			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
 		</Unit>
 		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.h">
 			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
 		</Unit>
-		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/TP2-LOG2810-H2017.pdf">
-			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
-		</Unit>
 		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.cpp">
 			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
 		</Unit>
 		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.h">
+			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
+		</Unit>
+		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/lexique1.txt">
 			<Option target="TP2_H2017_Automates_et_langages_20170323"/>
 		</Unit>
 		<Unit filename="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp">

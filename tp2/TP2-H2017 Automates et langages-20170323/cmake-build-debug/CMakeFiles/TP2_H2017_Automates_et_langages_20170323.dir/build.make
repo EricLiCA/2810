@@ -57,9 +57,33 @@ include CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/flags.make
 
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/flags.make
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o -c "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp"
+
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp" > CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i
+
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp" -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s
+
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
+
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/build.make CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides
+
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides.build: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o
+
+
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/flags.make
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o: ../Node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o -c "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.cpp"
 
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.i: cmake_force
@@ -83,7 +107,7 @@ CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o.provides.buil
 
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/flags.make
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o: ../Tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o -c "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.cpp"
 
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.i: cmake_force
@@ -105,42 +129,18 @@ CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o.provides: CMa
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o.provides.build: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o
 
 
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/flags.make
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o -c "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp"
-
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp" > CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.i
-
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp" -o CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.s
-
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
-
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/build.make CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides.build
-.PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides
-
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.provides.build: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o
-
-
 # Object files for target TP2_H2017_Automates_et_langages_20170323
 TP2_H2017_Automates_et_langages_20170323_OBJECTS = \
+"CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o" \
 "CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o" \
-"CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o" \
-"CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o"
+"CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o"
 
 # External object files for target TP2_H2017_Automates_et_langages_20170323
 TP2_H2017_Automates_et_langages_20170323_EXTERNAL_OBJECTS =
 
+TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o
 TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o
 TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o
-TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o
 TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/build.make
 TP2_H2017_Automates_et_langages_20170323: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TP2_H2017_Automates_et_langages_20170323"
@@ -151,9 +151,9 @@ CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/build: TP2_H2017_Automat
 
 .PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/build
 
+CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/requires: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/requires: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Node.cpp.o.requires
 CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/requires: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/Tree.cpp.o.requires
-CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/requires: CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/TP2_H2017_Automates_et_langages_20170323.dir/requires
 
