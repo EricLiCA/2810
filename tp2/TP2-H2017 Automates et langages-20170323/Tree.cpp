@@ -48,23 +48,29 @@ Tree::Tree(std::string lexiqueName) {
 void Tree::addWord(std::string wordToAdd){
     Node* currentNode = root_;
 
+
     //std::cout << "Entered function" << std::endl;
-    for (int i = 0; i < wordToAdd.size(); i++) {
+    /*for (int i = 0; i < wordToAdd.size(); i++) {
        // std::cout << wordToAdd.size() << std::endl;
         std::cout << "Entered loop" << std::endl;
         bool added = false;
         bool found = false;
         char currentCharacter = *wordToAdd.substr(i, 1).c_str();
-        if (currentNode->getMiddle() == nullptr) {
-            currentNode->addMiddle(new Node(*wordToAdd.substr(i+1, 1).c_str()));
+
+        if (currentCharacter == currentNode->getValue()) {
+            std::cout << "Entered equals" << std::endl;
+            std::cout << currentCharacter << std::endl;
+            found = true;
+            if(currentNode->getMiddle() != nullptr )
+                currentNode = currentNode->getMiddle();
+        }
+
+        else if(currentNode->getMiddle() == nullptr) {
+            currentNode->addMiddle(new Node(*wordToAdd.substr(i, 1).c_str()));
             added = true;
             currentNode = currentNode->getMiddle();
         }
-        else if (currentCharacter == currentNode->getValue()) {
-            //std::cout << "Entered equals" << std::endl;
-            found = true;
-            currentNode = currentNode->getMiddle();
-        }
+
         else if (currentCharacter < currentNode->getValue()) {
             //std::cout << "Entered smaller" << std::endl;
             if (currentNode->getLeft() == nullptr) {
@@ -89,5 +95,5 @@ void Tree::addWord(std::string wordToAdd){
             //std::cout << "Current i: " << i << std::endl;
         }
         std::cout << "NEXT ITERATION" << std::endl;
-    }
+    }*/
 }

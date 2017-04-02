@@ -30,6 +30,8 @@ public:
 
     void addMiddle(Node* newCharacter);
 
+    void changeValue(char character);
+
     void print();
 };
 

@@ -39,6 +39,10 @@ void Node::addMiddle(Node* newCharacter) {
     middle_ = newCharacter;
 }
 
+void Node::changeValue(char character) {
+    value_ = character;
+}
+
 void Node::print() {
     std::cout << value_;
 }
