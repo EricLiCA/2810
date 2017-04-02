@@ -12733,7 +12733,7 @@ moto
 motocyclette
 motos
 motrice
-mots
+mots_
 mou
 mouchard
 moucharder

@@ -1244,7 +1244,7 @@ moquerie
 morsure
 mortification
 motions
-mots
+mots_
 moucharder
 moue
 mouler

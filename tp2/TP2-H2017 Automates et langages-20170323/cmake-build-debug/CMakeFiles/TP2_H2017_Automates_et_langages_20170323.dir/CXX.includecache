@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.cpp
+Node.h
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.h
+
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.h
+iostream
+-
+
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.cpp
+Tree.h
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.h
+
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.h
+Node.h
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Node.h
+vector
+-
+fstream
+-
+
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/main.cpp
+Tree.h
+/Users/ericli/2810/tp2/TP2-H2017 Automates et langages-20170323/Tree.h
+
