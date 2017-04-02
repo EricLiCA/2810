@@ -9,7 +9,7 @@ Node::Node(char character) {
     left_ = nullptr;
     right_ = nullptr;
     middle_ = nullptr;
-    isFinal_ = false;
+    state_ = edge;
 }
 
 char Node::getValue() {
@@ -48,6 +48,10 @@ void Node::print() {
     std::cout << value_;
 }
 
-void Node::setAsFinal() {
-    isFinal_ = true;
+void Node::setState(State state) {
+    state_ = state;
+}
+
+State Node::getState() {
+    return state_;
 }

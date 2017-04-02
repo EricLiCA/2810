@@ -7,13 +7,17 @@
 
 #include <iostream>
 
+enum State {
+    start, edge, final
+};
+
 class Node {
 private:
     char value_;
     Node* left_;
     Node* right_;
     Node* middle_;
-    bool isFinal_;
+    State state_;
 
 public:
     Node(char character);
@@ -35,7 +39,9 @@ public:
 
     void print();
 
-    void setAsFinal();
+    void setState(State state);
+
+    State getState();
 };
 
 

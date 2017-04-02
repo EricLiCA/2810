@@ -12,7 +12,9 @@
 class Tree {
 private:
     Node* root_;
-    std::string suggestion_;
+    Node* suggestionNode_;
+    char suggestion_;
+    std::string typedCharacters_;
     std::vector<std::string> mots_;
 
 public:
@@ -20,6 +22,10 @@ public:
 
     void addWord(std::string wordToAdd);
     void addLexique(int low, int high);
+
+    void autocomplete();
+
+    void findSuggestion(char letter);
 };
 
 
