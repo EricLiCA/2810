@@ -19,6 +19,7 @@ public:
     Tree(std::string lexiqueName);
 
     void addWord(std::string wordToAdd);
+    void addLexique(int low, int high);
 };
 
 

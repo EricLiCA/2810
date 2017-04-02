@@ -13,6 +13,7 @@ private:
     Node* left_;
     Node* right_;
     Node* middle_;
+    bool isFinal_;
 
 public:
     Node(char character);
@@ -33,6 +34,8 @@ public:
     void changeValue(char character);
 
     void print();
+
+    void setAsFinal();
 };
 
 

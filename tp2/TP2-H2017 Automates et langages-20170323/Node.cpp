@@ -9,6 +9,7 @@ Node::Node(char character) {
     left_ = nullptr;
     right_ = nullptr;
     middle_ = nullptr;
+    isFinal_ = false;
 }
 
 char Node::getValue() {
@@ -45,4 +46,8 @@ void Node::changeValue(char character) {
 
 void Node::print() {
     std::cout << value_;
+}
+
+void Node::setAsFinal() {
+    isFinal_ = true;
 }

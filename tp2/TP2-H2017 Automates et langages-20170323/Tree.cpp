@@ -15,30 +15,7 @@ Tree::Tree(std::string lexiqueName) {
     Node* root = new Node(*rootWord.substr(0, 1).c_str());
     root_ = root;
     Node* currentNode = root_;
-    for (int i = 1; i < rootWord.size(); i++) {
-        currentNode->addMiddle(new Node(*rootWord.substr(i, 1).c_str()));
-        currentNode = currentNode->getMiddle();
-    }
-    currentNode = root_;
-    // To debug root word
-    while (currentNode != nullptr) {
-        currentNode->print();
-        currentNode = currentNode->getMiddle();
-    }
-    std::cout << std::endl;
-    std::cout << "123" << std::endl;
-    addWord("illettreeer");
-    addWord("audrey");
-    std::cout << "123" << std::endl;
-    currentNode = root_;
-    //currentNode = currentNode->getMiddle();
-    while (currentNode != nullptr) {
-        currentNode->print();
-        currentNode = currentNode->getMiddle();
-    }
-    std::cout << std::endl;
-    currentNode = root_;
-    currentNode = currentNode->getLeft();
+    addLexique(0, mots_.size() - 1);
     while (currentNode != nullptr) {
         currentNode->print();
         currentNode = currentNode->getMiddle();
@@ -47,53 +24,46 @@ Tree::Tree(std::string lexiqueName) {
 
 void Tree::addWord(std::string wordToAdd){
     Node* currentNode = root_;
+    int matchCounter = 0;
 
+    while (matchCounter < wordToAdd.size()) {
+        char currentCharacter = *wordToAdd.substr(matchCounter, 1).c_str();
 
-    //std::cout << "Entered function" << std::endl;
-    /*for (int i = 0; i < wordToAdd.size(); i++) {
-       // std::cout << wordToAdd.size() << std::endl;
-        std::cout << "Entered loop" << std::endl;
-        bool added = false;
-        bool found = false;
-        char currentCharacter = *wordToAdd.substr(i, 1).c_str();
-
-        if (currentCharacter == currentNode->getValue()) {
-            std::cout << "Entered equals" << std::endl;
-            std::cout << currentCharacter << std::endl;
-            found = true;
-            if(currentNode->getMiddle() != nullptr )
-                currentNode = currentNode->getMiddle();
-        }
-
-        else if(currentNode->getMiddle() == nullptr) {
-            currentNode->addMiddle(new Node(*wordToAdd.substr(i, 1).c_str()));
-            added = true;
+        if (currentNode->getValue() == currentCharacter) {
+            matchCounter++;
+            if (currentNode->getMiddle() == nullptr) {
+                if (matchCounter < wordToAdd.size()) {
+                    currentNode->addMiddle(new Node(*wordToAdd.substr(matchCounter, 1).c_str()));
+                }
+                else {
+                    currentNode->setAsFinal();
+                }
+            }
             currentNode = currentNode->getMiddle();
         }
+        else {
+            if (*wordToAdd.substr(matchCounter, 1).c_str() < currentNode->getValue()) {
+                if (currentNode->getLeft() == nullptr) {
+                    currentNode->addLeft(new Node(*wordToAdd.substr(matchCounter, 1).c_str()));
+                }
+                currentNode = currentNode->getLeft();
+            }
+            else {
+                if (currentNode->getRight() == nullptr) {
+                    currentNode->addRight(new Node(*wordToAdd.substr(matchCounter, 1).c_str()));
+                }
+                currentNode = currentNode->getRight();
+            }
+        }
+    }
+}
 
-        else if (currentCharacter < currentNode->getValue()) {
-            //std::cout << "Entered smaller" << std::endl;
-            if (currentNode->getLeft() == nullptr) {
-                currentNode->addLeft(new Node(*wordToAdd.substr(i, 1).c_str()));
-                added = true;
-            }
-            currentNode = currentNode->getLeft();
-        }
-        else if (currentCharacter > currentNode->getValue()) {
-            //std::cout << "Entered bigger" << std::endl;
-            if (currentNode->getRight() == nullptr) {
-                currentNode->addRight(new Node(*wordToAdd.substr(i, 1).c_str()));
-                added = true;
-            }
-            currentNode = currentNode->getRight();
-        }
-        if (!added && !found) {
-            //std::cout << "Entered decrementation" << std::endl;
-            i--;
-        } else {
-            //std::cout << "Character printed: " << currentCharacter << std::endl;
-            //std::cout << "Current i: " << i << std::endl;
-        }
-        std::cout << "NEXT ITERATION" << std::endl;
-    }*/
+void Tree::addLexique(int low, int high) {
+    int mid = (high - low) / 2 + low;
+    if (low <= high) {
+        std::string midWord = mots_[mid];
+        addWord(midWord);
+        addLexique(low, mid - 1);
+        addLexique(mid + 1, high);
+    }
 }
