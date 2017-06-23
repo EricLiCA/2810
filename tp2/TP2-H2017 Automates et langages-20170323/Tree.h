@@ -12,6 +12,7 @@
 class Tree {
 private:
     Node* root_;
+    Node* final_;
     Node* suggestionNode_;
     std::string suggestion_;
     std::string typedCharacters_;

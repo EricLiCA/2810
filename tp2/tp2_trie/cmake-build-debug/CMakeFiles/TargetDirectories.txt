@@ -1,0 +1,3 @@
+/Users/ericli/2810/tp2/tp2_trie/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ericli/2810/tp2/tp2_trie/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/ericli/2810/tp2/tp2_trie/cmake-build-debug/CMakeFiles/tp2_trie.dir

@@ -11,6 +11,10 @@ enum State {
     start, edge, final
 };
 
+enum Branching {
+    uniqueIn_Out, uniqueIn_multipleOut, multipleIn_uniqueOut, multipleIn_Out
+};
+
 class Node {
 private:
     char value_;

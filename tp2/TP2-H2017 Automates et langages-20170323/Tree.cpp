@@ -4,7 +4,7 @@ Tree::Tree(std::string lexiqueName) {
     std::ifstream infile(lexiqueName);
     for( std::string line; getline( infile, line );) mots_.push_back(line);
 
-    std::string rootWord = mots_[mots_.size()/2];
+    std::string rootWord = mots_[(mots_.size() - 1)/2];
     Node* root = new Node(*rootWord.substr(0, 1).c_str());
     root_ = root;
     suggestionNode_ = root_;
@@ -85,6 +85,7 @@ void Tree::autocomplete() {
         letter = *letter.substr(0, 1).c_str();
         typedCharacters_ += letter;
         suggestion_ = typedCharacters_;
+        std::cout << "\r" + typedCharacters_ << std::endl;
         findSuggestion(*letter.c_str());
         std::cout << suggestion_ << std::endl;
     }
